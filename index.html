@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
         :root {
             --pink-primary: #e6007e;
@@ -67,6 +73,7 @@
             .profile-img-container {
                 margin: 0 auto 20px auto;
             }
+
             .row.align-items-start {
                 text-align: center;
             }
@@ -78,60 +85,157 @@
             object-fit: cover;
         }
 
-        /* Text Styling */
         .welcome-text {
             font-size: 0.9rem;
             opacity: 0.9;
             margin-bottom: 5px;
             font-weight: 600;
-            color: #D75281; /* WELCOME! */
+            color: #D75281;
         }
 
         .name-header {
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.1;
-            color: #7F1F40; /* Hi, I'm Jana */
+            color: #7F1F40;
         }
 
         .subtitle-text {
             font-size: 1.2rem;
             opacity: 0.9;
             font-weight: 400;
-            color: #D75281; /* Third year Student */
+            color: #D75281;
         }
 
-        /* About Me Title */
         .about-card-title {
             font-size: 1.4rem;
-            font-family: 'Poppins', sans-serif;
             font-weight: 700;
             margin-bottom: 15px;
-            color: #7F1F40; /* About Me */
+            color: #7F1F40;
         }
 
-        /* About Me Paragraph */
         .about-card p {
-            color: var(--paragraph-color); /* #8B2A4C */
+            color: var(--paragraph-color);
             font-size: 1rem;
             font-weight: 400;
         }
 
+        /* Activities Section */
+        .activities-section {
+            margin-top: 60px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7F1F40;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .activity-card {
+            background-color: var(--card-color);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: var(--drop-shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .activity-card h5 {
+            color: #7F1F40;
+            font-weight: 600;
+        }
+
+        .activity-card p {
+            color: var(--paragraph-color);
+            font-size: 0.95rem;
+        }
+
+        .header-preview img {
+            border-radius: 15px;
+            object-fit: cover;
+            width: 100%;
+            height: 180px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-view {
+            background: linear-gradient(90deg, var(--pink-primary), var(--pink-light));
+            border: none;
+            color: white;
+            border-radius: 20px;
+            padding: 8px 18px;
+            transition: 0.3s;
+        }
+
+        .btn-view:hover {
+            background: linear-gradient(90deg, var(--pink-light), var(--pink-primary));
+            box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 20px;
+            padding: 50px 30px;
+            margin-top: 70px;
+            box-shadow: var(--drop-shadow);
+            color: var(--paragraph-color);
+        }
+
+        .contact-section h3 {
+            text-align: center;
+            color: #7F1F40;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            color: var(--paragraph-color);
+            font-weight: 500;
+        }
+
+        .contact-info i {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 50px;
+            padding-bottom: 30px;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container portfolio-container">
+        <!-- Header & About Me -->
         <div class="row align-items-start mb-4">
-            
-            <div class="col-12 col-sm-8 mt-4"> 
+            <div class="col-12 col-sm-8 mt-4">
                 <p class="welcome-text text-uppercase">WELCOME!</p>
                 <h1 class="name-header">Hi, I'm Jana</h1>
-                <p class="subtitle-text">Third year Student</p>
+                <p class="subtitle-text">Third Year Student</p>
             </div>
-            
-            <div class="col-12 col-sm-4 d-flex justify-content-sm-end justify-content-center"> 
-                <div class="profile-img-container"> 
+            <div class="col-12 col-sm-4 d-flex justify-content-sm-end justify-content-center">
+                <div class="profile-img-container">
                     <img src="assets/pic.png" alt="Jana Mae Profile" class="profile-img">
                 </div>
             </div>
@@ -140,16 +244,92 @@
         <div class="about-card mt-4">
             <h3 class="about-card-title">About Me</h3>
             <p>
-                Hi there! I'm Jana Mae, and I'm currently an Information Technology
-                student at the Polytechnic University of the Philippines (PUP) in Sto.
-                Tomas. I love figuring out how things work and, more importantly, how
-                to make them work better for people. I'm especially interested in the
-                digital side of things, like web development, and focusing on building
-                simple, clean solutions.
+                Hi there! I'm Jana Mae, and I'm currently an Information Technology student at the Polytechnic
+                University of the
+                Philippines (PUP) in Sto. Tomas. I love figuring out how things work and, more importantly, how to make
+                them work
+                better for people. I'm especially interested in web development and creating simple, clean, and
+                meaningful digital
+                experiences.
             </p>
         </div>
+
+        <!-- Activities Section -->
+        <section class="activities-section text-center">
+            <h3 class="section-title">ACTIVITIES</h3>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-5">
+                    <div class="activity-card h-100 p-3">
+                        <div class="header-preview mb-3">
+                            <img src="assets/iphone15_header.png" alt="iPhone 15 Showcase Preview"
+                                class="img-fluid rounded shadow-sm">
+                        </div>
+                        <h5>iPhone 15 – Gadget Showcase</h5>
+                        <p>A sleek website highlighting the cutting-edge features of the iPhone 15, presented with
+                            modern animations
+                            and smooth scrolling sections.</p>
+                        <a href="https://janamacandili.github.io/janamae-showcase/" target="_blank"
+                            class="btn btn-view">View
+                            Project</a>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="activity-card h-100 p-3">
+                        <div class="header-preview mb-3">
+                            <img src="assets/switzerland_header.png" alt="Switzerland Showcase Preview"
+                                class="img-fluid rounded shadow-sm">
+                        </div>
+                        <h5>Switzerland – Country Showcase</h5>
+                        <p>A beautifully designed travel website exploring Switzerland’s breathtaking landscapes and top
+                            destinations
+                            — crafted with elegant visuals and an immersive user experience.</p>
+                        <a href="https://janamacandili.github.io/switzerland/" target="_blank" class="btn btn-view">View
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section mt-5">
+            <h3>Get in Touch</h3>
+            <div class="contact-info" style="color: #ffffff;">
+                <p><i class="bi bi-envelope-fill text-white"></i>
+                    <span style="font-weight: 600;">Email:</span>
+                    <a href="mailto:janamaemacandili@gmail.com" style="color:#ffffff; text-decoration:none;">
+                        janamaemacandili@gmail.com
+                    </a>
+                </p>
+                <p><i class="bi bi-phone-fill text-white"></i>
+                    <span style="font-weight: 600;">Phone:</span>
+                    <span style="color:#ffffff;">0970-131-9849</span>
+                </p>
+                <p><i class="bi bi-github text-white"></i>
+                    <span style="font-weight: 600;">GitHub:</span>
+                    <a href="https://github.com/janamacandili" target="_blank"
+                        style="color:#ffffff; text-decoration:none;">
+                        github.com/janamacandili
+                    </a>
+                </p>
+                <p><i class="bi bi-facebook text-white"></i>
+                    <span style="font-weight: 600;">Facebook:</span>
+                    <a href="#" style="color:#ffffff; text-decoration:none;">facebook.com/janamae</a>
+                </p>
+                <p><i class="bi bi-instagram text-white"></i>
+                    <span style="font-weight: 600;">Instagram:</span>
+                    <a href="#" style="color:#ffffff; text-decoration:none;">@jnamaeee</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            © 2025 Jana Mae Macandili — All Rights Reserved.
+        </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
